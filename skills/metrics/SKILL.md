@@ -100,7 +100,10 @@ the agent-file and .gitignore lines, and say so at the top of the file.
 6. **Get each value by running something.** A read-only query the person
    allows, a CSV read with a script, or an API with a read-only key. Commands
    go in `scripts/metrics.sh` (or the repo's own scripts folder), and the table
-   says in plain words how a number is counted. End the section with one line:
+   says in plain words how a number is counted. Use only tools every computer
+   has (`sh`, `grep`, `awk`, `sed`, `python3`) or the repo's own commands, and
+   run it once with `sh scripts/metrics.sh` in a plain terminal: your agent's
+   shell may have tools the person's doesn't. End the section with one line:
    `To refresh: run scripts/metrics.sh`. Record the period covered and the
    source's last date. Done when every value was produced by a command or is
    `not measured yet`.
